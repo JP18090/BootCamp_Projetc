@@ -1,0 +1,306 @@
+/* ============================================
+   Paleta exclusiva Itaú Unibanco
+   ============================================ */
+:root {
+    --itau-laranja: #EC7000;
+    --itau-laranja-escuro: #C85E00;
+    --itau-azul-escuro: #003767;
+    --itau-azul: #106EB0;
+    --itau-branco: #FFFFFF;
+    --itau-cinza-fundo: #F5F5F5;
+    --itau-cinza-texto: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--itau-cinza-fundo);
+    color: var(--itau-cinza-texto);
+    min-height: 100vh;
+}
+
+/* ---------- Login ---------- */
+.login-body {
+    background: linear-gradient(135deg, var(--itau-azul-escuro) 0%, var(--itau-azul) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background: var(--itau-branco);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 55, 103, 0.35);
+    text-align: center;
+}
+
+.login-logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    background-color: var(--itau-laranja);
+    color: var(--itau-branco);
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.login-card h1 {
+    color: var(--itau-azul-escuro);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.login-card p {
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--itau-azul-escuro);
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #DDD;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--itau-laranja);
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--itau-laranja);
+    color: var(--itau-branco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--itau-laranja-escuro);
+}
+
+.btn-secundario {
+    background-color: var(--itau-azul-escuro);
+}
+
+.btn-secundario:hover {
+    background-color: var(--itau-azul);
+}
+
+.alerta {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.alerta-erro {
+    background-color: #FDECEA;
+    color: #B3261E;
+    border: 1px solid #F5C6C0;
+}
+
+.alerta-sucesso {
+    background-color: #E8F5E9;
+    color: #1B5E20;
+    border: 1px solid #C8E6C9;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    background-color: var(--itau-laranja);
+    color: var(--itau-branco);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    box-shadow: 0 2px 8px rgba(0, 55, 103, 0.25);
+}
+
+.navbar .marca {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .marca span {
+    color: var(--itau-azul-escuro);
+}
+
+.navbar nav a {
+    color: var(--itau-branco);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.ativo {
+    background-color: var(--itau-laranja-escuro);
+}
+
+.navbar nav a.sair {
+    background-color: var(--itau-azul-escuro);
+}
+
+/* ---------- Layout das páginas ---------- */
+.container {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+
+.card {
+    background: var(--itau-branco);
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 10px rgba(0, 55, 103, 0.12);
+}
+
+.card h2 {
+    color: var(--itau-azul-escuro);
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.saldo-valor {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--itau-laranja);
+}
+
+.saldo-info {
+    font-size: 14px;
+    color: var(--itau-cinza-texto);
+    margin-bottom: 8px;
+}
+
+.acoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.acao-card {
+    background: var(--itau-branco);
+    border: 2px solid var(--itau-laranja);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--itau-azul-escuro);
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.acao-card:hover {
+    background-color: var(--itau-laranja);
+    color: var(--itau-branco);
+}
+
+.acao-card .icone {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* ---------- Extrato ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: var(--itau-azul-escuro);
+    color: var(--itau-branco);
+    padding: 12px;
+    text-align: left;
+    font-size: 13px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #EEE;
+    font-size: 14px;
+}
+
+tr:hover td {
+    background-color: var(--itau-cinza-fundo);
+}
+
+.valor-negativo {
+    color: #B3261E;
+    font-weight: bold;
+}
+
+.valor-positivo {
+    color: #1B5E20;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.badge-concluida {
+    background-color: #E8F5E9;
+    color: #1B5E20;
+}
+
+.badge-analise {
+    background-color: #FFF3E0;
+    color: var(--itau-laranja-escuro);
+}
+
+.btn-contestar {
+    padding: 6px 12px;
+    font-size: 12px;
+    width: auto;
+    border-radius: 6px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Banco Bootcamp</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="login-body">
+    <div class="login-card">
+        <div class="login-logo">B</div>
+        <h1>Banco Bootcamp</h1>
+        <p>Acesse sua conta com usuário e senha</p>
+
+        <div id="alerta-erro" class="alerta alerta-erro" style="display:none;">
+            Usuário ou senha inválidos. Tente novamente.
+        </div>
+        <div id="alerta-saida" class="alerta alerta-sucesso" style="display:none;">
+            Você saiu com segurança. Até logo!
+        </div>
+        <div id="alerta-cadastro" class="alerta alerta-sucesso" style="display:none;">
+            Conta criada com sucesso! Faça login para acessar.
+        </div>
+
+        <form method="post" action="/login">
+            <div class="form-group">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Ex.: cliente" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Sua senha" required>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+
+        <p style="margin-top: 20px; font-size: 14px;">
+            Não tem conta?
+            <a href="/cadastro.html" style="color: var(--itau-laranja); font-weight: bold;">Criar conta grátis</a>
+        </p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('erro')) {
+            document.getElementById('alerta-erro').style.display = 'block';
+        }
+        if (params.get('saiu')) {
+            document.getElementById('alerta-saida').style.display = 'block';
+        }
+        if (params.get('cadastrado')) {
+            document.getElementById('alerta-cadastro').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

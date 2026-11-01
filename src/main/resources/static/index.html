@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Banco Bootcamp</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="marca">Banco <span>Bootcamp</span></div>
+        <nav>
+            <a href="/index.html" class="ativo">Início</a>
+            <a href="/pix.html">PIX</a>
+            <a href="/extrato.html">Extrato</a>
+            <a href="/logout" class="sair">Sair</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <p class="saldo-info">Olá, <strong id="nome-cliente">...</strong></p>
+            <p class="saldo-info">Agência <span id="agencia">...</span> · Conta <span id="numero-conta">...</span></p>
+            <h2>Saldo disponível</h2>
+            <div class="saldo-valor" id="saldo">R$ --,--</div>
+        </div>
+
+        <h2 style="color: var(--itau-azul-escuro); margin-bottom: 16px;">O que você quer fazer?</h2>
+        <div class="acoes-grid">
+            <a href="/pix.html" class="acao-card">
+                <span class="icone">💸</span>
+                Fazer um PIX
+            </a>
+            <a href="/extrato.html" class="acao-card">
+                <span class="icone">📄</span>
+                Ver extrato
+            </a>
+            <a href="/extrato.html" class="acao-card">
+                <span class="icone">⚠️</span>
+                Contestar transação
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script>
+        carregarSaldo();
+    </script>
+</body>
+</html>

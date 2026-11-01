@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIX - Banco Bootcamp</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="marca">Banco <span>Bootcamp</span></div>
+        <nav>
+            <a href="/index.html">Início</a>
+            <a href="/pix.html" class="ativo">PIX</a>
+            <a href="/extrato.html">Extrato</a>
+            <a href="/logout" class="sair">Sair</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <p class="saldo-info">Saldo disponível: <strong id="saldo">R$ --,--</strong></p>
+            <h2>Fazer um PIX</h2>
+
+            <div id="mensagem" style="display:none;"></div>
+
+            <form id="form-pix">
+                <div class="form-group">
+                    <label for="chave">Chave PIX de destino</label>
+                    <input type="text" id="chave" placeholder="CPF, e-mail, telefone ou chave aleatória" required>
+                </div>
+                <div class="form-group">
+                    <label for="valor">Valor (R$)</label>
+                    <input type="number" id="valor" min="0.01" step="0.01" placeholder="0,00" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição (opcional)</label>
+                    <input type="text" id="descricao" placeholder="Ex.: Pagamento almoço">
+                </div>
+                <button type="submit" class="btn">Enviar PIX</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script>
+        carregarSaldo();
+        configurarFormularioPix();
+    </script>
+</body>
+</html>
